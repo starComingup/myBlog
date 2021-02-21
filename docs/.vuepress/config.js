@@ -9,6 +9,13 @@ module.exports = {
     lineNumbers: false // 代码块显示行号
   },
   themeConfig: {
+    repo: "https://github.com/starComingup/myBlog.git",
+    repoLabel: 'GitHub',
+    docsDir:'docs',
+    docsBranch: 'main',
+    editLinks: true,
+    editLinkText: 'Edit this page',
+    lastUpdated: 'Last Updated',
     nav:[ // 导航栏配置
       { text: '后端开发', link: '/springboot/' },
       { text: '算法探析', link: '/algorithm/'},
@@ -23,7 +30,6 @@ module.exports = {
       }
     ],
     smoothScroll: true,
-    editLinks: true,
     //displayAllHeaders: true,//显示所有页面的标题链接
     sidebar: {
     '/springboot/': getSpringBoot('指南','深入'), // 侧边栏配置
@@ -35,20 +41,49 @@ module.exports = {
         children: [
           '',
           'ssh',
-          'system-service'
+          'system-service',
+          'nginx-security',
+          'docker-security'
         ] 
       }
     ],
     '/operatingsystem/': getOs(),
     '/network/': getNetwork(),
     '/security/': getNetworkSecurity()
+    }    
   },
   plugins: [
-    ['@vuepress/back-to-top', true],
-    ['@vuepress/active-header-links', true]//,
-    //['autobar']
-    ]
-  }
+      ['@vuepress/back-to-top',true],
+      ['one-click-copy', {
+          copySelector: ['div[class*="language-"] pre', 'div[class*="aside-code"] aside'], // String or Array
+          copyMessage: '复制成功！', // default is 'Copy successfully and then paste it for use.'
+          duration: 500, // prompt message display time.
+          showInMobile: false // whether to display on the mobile side, default: false.
+      }],
+      ['vuepress-plugin-comment',
+      {
+        choosen: 'valine', 
+        // options选项中的所有参数，会传给Valine的配置
+        options: {
+          el: '#valine-vuepress-comment',
+          appId: 'Rw2VADDbLKVBHLW2UTngsuDi-9Nh9j0Va',
+          appKey: 'lsvve0HWh9vKwNQFwPGwCMnA'
+        }
+      }]
+    //   [
+    //   '@vuepress/last-updated',
+    //   {
+    //     transformer: (timestamp, lang) => {
+    //       // 不要忘了安装 moment
+    //       const moment = require('moment')
+    //       moment.locale(lang)
+    //       return moment(timestamp).fromNow()
+    //     }
+    //   }
+    // ]
+  ]
+    
+  
 }
 
 function getSpringBoot(groupA,groupB) {

@@ -15,7 +15,18 @@
     "@vuepress/plugin-active-header-links": "^1.8.1",
     "@vuepress/plugin-back-to-top": "^1.8.1",
     "@vuepress/theme-blog": "^2.3.3",
+    "esm": "^3.2.25",
     "vuepress": "^1.8.1",
-    "vuepress-plugin-autobar": "github:boboidream/vuepress-bar"
+    "vuepress-plugin-autobar": "github:boboidream/vuepress-bar",
+    "vuepress-plugin-one-click-copy": "^1.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/starComingup/myBlog.git"
+  },
+  "dependencies": {
+    "moment": "^2.29.1",
+    "valine": "^1.4.14",
+    "vuepress-plugin-comment": "^0.7.3"
   }
 }

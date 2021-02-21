@@ -1,15 +1,17 @@
 ---
 home: true
 heroImage: 
+heroText: Star小屋
+tagline: Stay Hungry Stay Foolish!
 actionText: 开始阅读 →
 actionLink: /guide/
 features:
-- title: 简洁至上
-  details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。
-- title: Vue驱动
-  details: 享受 Vue + webpack 的开发体验，在 Markdown 中使用 Vue 组件，同时可以使用 Vue 来开发自定义主题。
-- title: 高性能
-  details: VuePress 为每个页面预渲染生成静态的 HTML，同时在页面被加载的时候，将作为 SPA 运行。
+- title: 个人介绍
+  details: 主要技术栈：Java后端开发、Android开发、Linux运维、爱好容器技术、架构研究、开源爱好者。
+- title: 笔记主题
+  details: Maven笔记、运维笔记、数据结构与算法、计算机网络、操作系统,网络安全。
+- title: 技术博客
+  details: 将不定期更新一些相关技术以及见解，包括行业动态，安全技术，框架使用，源码解读。
 footer: MIT Licensed | Copyright © 2020-present Starcoming
 
 ---

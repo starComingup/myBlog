@@ -25,5 +25,5 @@ git commit -m $1
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
 
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:starComingup/myBlog.git main:gh-pages
+git push -f git@github.com:starComingup/myBlog.git master:gh-pages
 # https://github.com/starComingup/myBlog.git
