@@ -6,7 +6,7 @@ module.exports = {
   ],
   base: '/myBlog/', // 这是部署到github相关的配置
   markdown: {
-    lineNumbers: false // 代码块显示行号
+    lineNumbers: true // 代码块显示行号
   },
   themeConfig: {
     repo: "https://github.com/starComingup/myBlog.git",
@@ -33,13 +33,14 @@ module.exports = {
     //displayAllHeaders: true,//显示所有页面的标题链接
     sidebar: {
     '/springboot/': getSpringBoot('指南','深入'), // 侧边栏配置
-    '/algotithm/': getAlgorithm(),
+    '/algorithm/': getAlgorithm(),
     '/sustain/':  [{
         title: '运维笔记',
         collapsable: true,
         sidebarDepth: 2,
         children: [
           '',
+          'custom_domain&https',
           'ssh',
           'system-service',
           'nginx-security',
@@ -104,46 +105,17 @@ function getSpringBoot(groupA,groupB) {
   }]
 }
 function getAlgorithm(){
-  return [
-  {
-    title: '排序',
-    collapsable: false,
-    sidebarDepth: 2,
-    children: [
+  return [{
+      title: '算法初探',
+      collapsable: false,
+      children: [
+        '',
+        'linear-table'
+      ]
+     }
     ]
-  },
-  {
-    title: '栈与队列',
-    collapsable: false,
-    children: [
-    ]
-  },
-  {
-    title: '树',
-    collapsable: false,
-    children:[
-    ]
-  },
-  {
-    title: '图',
-    collapsable: false,
-    children:[
-    ]
-  },
-  {
-    title: '哈希',
-    collapsable: false,
-    children: [
-    ]
-  },
-  {
-    title: '其他',
-    collapsable: false,
-    children: [
-    ]
-  }
-  ]
 }
+
 
 // function getSustain(){
 //   return 

@@ -26,4 +26,5 @@ git commit -m $1
 
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
 git push -f git@github.com:starComingup/myBlog.git master:gh-pages
+#将所有内容同步到主干分支上git push git@github.com:starComingup/myBlog.git master:main
 # https://github.com/starComingup/myBlog.git
