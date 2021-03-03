@@ -12,7 +12,7 @@
 - [角色管理](#)
 - [sed与awk](#)
 - [Web应用安装与配置](#)
-- [shell的写法]()
+- [shell的写法](shell.md)
 - [HTTPS配置](custom_domain&https.md)
 - [ssh配置](ssh.md)
 - [系统服务](system-service.md)
