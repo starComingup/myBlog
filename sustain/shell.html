@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>SHELL编程 | starcoming</title>
+    <meta name="generator" content="VuePress 1.8.1">
+    <link rel="icon" href="logo.png">
+    <meta name="description" content="Star 互联网根据地">
+    
+    <link rel="preload" href="/myBlog/assets/css/0.styles.fb3985b6.css" as="style"><link rel="preload" href="/myBlog/assets/js/app.50c7974d.js" as="script"><link rel="preload" href="/myBlog/assets/js/2.1d8fec94.js" as="script"><link rel="preload" href="/myBlog/assets/js/23.0153ead4.js" as="script"><link rel="prefetch" href="/myBlog/assets/js/10.1c777960.js"><link rel="prefetch" href="/myBlog/assets/js/11.1ecd2dbf.js"><link rel="prefetch" href="/myBlog/assets/js/12.17a1da9f.js"><link rel="prefetch" href="/myBlog/assets/js/13.8a794855.js"><link rel="prefetch" href="/myBlog/assets/js/14.2bb9244c.js"><link rel="prefetch" href="/myBlog/assets/js/15.8869bc9b.js"><link rel="prefetch" href="/myBlog/assets/js/16.0a5f97a2.js"><link rel="prefetch" href="/myBlog/assets/js/17.712f5db1.js"><link rel="prefetch" href="/myBlog/assets/js/18.76c6be13.js"><link rel="prefetch" href="/myBlog/assets/js/19.ab9162bd.js"><link rel="prefetch" href="/myBlog/assets/js/20.f68044ed.js"><link rel="prefetch" href="/myBlog/assets/js/21.211afa34.js"><link rel="prefetch" href="/myBlog/assets/js/22.e315ea7f.js"><link rel="prefetch" href="/myBlog/assets/js/24.40c7e409.js"><link rel="prefetch" href="/myBlog/assets/js/25.8fedbe1b.js"><link rel="prefetch" href="/myBlog/assets/js/26.3557c4bb.js"><link rel="prefetch" href="/myBlog/assets/js/27.9a28b9bc.js"><link rel="prefetch" href="/myBlog/assets/js/28.cb3a74a1.js"><link rel="prefetch" href="/myBlog/assets/js/29.684c9f19.js"><link rel="prefetch" href="/myBlog/assets/js/3.d70ceed9.js"><link rel="prefetch" href="/myBlog/assets/js/30.c2843dd3.js"><link rel="prefetch" href="/myBlog/assets/js/31.51d91a08.js"><link rel="prefetch" href="/myBlog/assets/js/4.e48a78d5.js"><link rel="prefetch" href="/myBlog/assets/js/5.d9c5b5f0.js"><link rel="prefetch" href="/myBlog/assets/js/6.1d4193ca.js"><link rel="prefetch" href="/myBlog/assets/js/7.9494dbc0.js"><link rel="prefetch" href="/myBlog/assets/js/8.7dd360ea.js"><link rel="prefetch" href="/myBlog/assets/js/9.31816ce5.js">
+    <link rel="stylesheet" href="/myBlog/assets/css/0.styles.fb3985b6.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/myBlog/" class="home-link router-link-active"><!----> <span class="site-name">starcoming</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/myBlog/Java/" class="nav-link">
+  后端开发
+</a></div><div class="nav-item"><a href="/myBlog/algorithm/" class="nav-link">
+  算法探析
+</a></div><div class="nav-item"><a href="/myBlog/sustain/" class="nav-link router-link-active">
+  Linux运维
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="other Menu" class="dropdown-title"><span class="title">学到更多</span> <span class="arrow down"></span></button> <button type="button" aria-label="other Menu" class="mobile-dropdown-title"><span class="title">学到更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/myBlog/operatingsystem/" class="nav-link">
+  操作系统
+</a></li><li class="dropdown-item"><!----> <a href="/myBlog/yjs/compute_network/" class="nav-link">
+  计算机网络
+</a></li><li class="dropdown-item"><!----> <a href="/myBlog/yjs/compute_compose_principle/" class="nav-link">
+  计算机组成原理
+</a></li><li class="dropdown-item"><!----> <a href="/myBlog/security/" class="nav-link">
+  网络安全
+</a></li></ul></div></div> <a href="https://github.com/starComingup/myBlog.git" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/myBlog/Java/" class="nav-link">
+  后端开发
+</a></div><div class="nav-item"><a href="/myBlog/algorithm/" class="nav-link">
+  算法探析
+</a></div><div class="nav-item"><a href="/myBlog/sustain/" class="nav-link router-link-active">
+  Linux运维
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="other Menu" class="dropdown-title"><span class="title">学到更多</span> <span class="arrow down"></span></button> <button type="button" aria-label="other Menu" class="mobile-dropdown-title"><span class="title">学到更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/myBlog/operatingsystem/" class="nav-link">
+  操作系统
+</a></li><li class="dropdown-item"><!----> <a href="/myBlog/yjs/compute_network/" class="nav-link">
+  计算机网络
+</a></li><li class="dropdown-item"><!----> <a href="/myBlog/yjs/compute_compose_principle/" class="nav-link">
+  计算机组成原理
+</a></li><li class="dropdown-item"><!----> <a href="/myBlog/security/" class="nav-link">
+  网络安全
+</a></li></ul></div></div> <a href="https://github.com/starComingup/myBlog.git" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>运维笔记</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/myBlog/sustain/" aria-current="page" class="sidebar-link">Linux运维</a></li><li><a href="/myBlog/sustain/shell.html" aria-current="page" class="active sidebar-link">SHELL编程</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/myBlog/sustain/shell.html#先上需求" class="sidebar-link">先上需求</a></li><li class="sidebar-sub-header"><a href="/myBlog/sustain/shell.html#再上代码" class="sidebar-link">再上代码</a></li><li class="sidebar-sub-header"><a href="/myBlog/sustain/shell.html#运行样例" class="sidebar-link">运行样例</a></li><li class="sidebar-sub-header"><a href="/myBlog/sustain/shell.html#以此类推" class="sidebar-link">以此类推</a></li><li class="sidebar-sub-header"><a href="/myBlog/sustain/shell.html#" class="sidebar-link"></a></li></ul></li><li><a href="/myBlog/sustain/custom_domain&amp;https.html" class="sidebar-link">HTTPS配置</a></li><li><a href="/myBlog/sustain/ssh.html" class="sidebar-link">SSH配置</a></li><li><a href="/myBlog/sustain/system-service.html" class="sidebar-link">系统服务</a></li><li><a href="/myBlog/sustain/nginx-security.html" class="sidebar-link">Nginx安全风险评估以及配置策略</a></li><li><a href="/myBlog/sustain/docker-security.html" class="sidebar-link">Docker安全风险评估以及配置策略</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="shell编程"><a href="#shell编程" class="header-anchor">#</a> SHELL编程</h1> <p>Shell是一个用C编写的程序，既是一种命令语言，又是一种程序设计语言。他可以提供用户与操作系统内核的交互。通过使用Shell脚本，人们可以很简便的执行一些重复性的操作，比如查看日志，处理文件，备份等等。</p> <div class="custom-block tip"><p class="custom-block-title">环境</p> <p>本文基于Ubuntu20.04与Bash进行介绍。</p></div> <h2 id="先上需求"><a href="#先上需求" class="header-anchor">#</a> 先上需求</h2> <ol><li>编写 adduser.sh, 具体参数要求如下：</li> <li>参数l表示总长度</li> <li>参数s表示特殊字符数量</li> <li>参数o表示编码顺序乱序</li></ol> <h2 id="再上代码"><a href="#再上代码" class="header-anchor">#</a> 再上代码</h2> <div class="language-shell line-numbers-mode"><div class="highlight-lines"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><div class="highlighted"> </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div><pre class="language-shell"><code><span class="token shebang important">#!/bin/bash</span>
+<span class="token comment"># 使用说明</span>
+<span class="token function-name function">usage</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token builtin class-name">echo</span> <span class="token string">&quot;Usage: <span class="token variable">${0}</span> [-o] [-l LENGTH] [-s CHAR LENGTH]&quot;</span> <span class="token operator">&gt;</span><span class="token file-descriptor important">&amp;2</span>
+  <span class="token builtin class-name">echo</span> <span class="token string">'Generate a random password'</span>
+  <span class="token builtin class-name">echo</span> <span class="token string">'  -l LENGTH specify the password length'</span> 
+  <span class="token builtin class-name">echo</span> <span class="token string">'  -s Append a special char to the password'</span>
+  <span class="token builtin class-name">echo</span> <span class="token string">'  -o Disorder the password'</span>
+  <span class="token builtin class-name">exit</span> <span class="token number">1</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment"># 密码总长度</span>
+<span class="token assign-left variable">LEN</span><span class="token operator">=</span><span class="token number">48</span>
+
+<span class="token comment"># 特殊字符长度</span>
+<span class="token assign-left variable">CHAR_LEN</span><span class="token operator">=</span><span class="token number">0</span>
+<span class="token comment"># 获取用户的操作</span>
+<span class="token keyword">while</span> <span class="token builtin class-name">getopts</span> ol:s: OPTION
+<span class="token keyword">do</span>
+  <span class="token keyword">case</span> <span class="token string">&quot;<span class="token variable">${OPTION}</span>&quot;</span> <span class="token keyword">in</span>
+    o<span class="token punctuation">)</span>  <span class="token comment"># 打乱密码顺序</span>
+      <span class="token assign-left variable">DISORDER</span><span class="token operator">=</span><span class="token string">'true'</span>
+      <span class="token punctuation">;</span><span class="token punctuation">;</span>
+    l<span class="token punctuation">)</span>  <span class="token comment"># 获取密码总长度</span>
+      <span class="token assign-left variable">LEN</span><span class="token operator">=</span><span class="token string">&quot;<span class="token variable">${OPTARG}</span>&quot;</span>
+      <span class="token punctuation">;</span><span class="token punctuation">;</span>
+    s<span class="token punctuation">)</span>  <span class="token comment"># 获取特殊字符长度</span>
+      <span class="token assign-left variable">USE_SPEC_CHAR</span><span class="token operator">=</span><span class="token string">'true'</span>
+      <span class="token assign-left variable">CHAR_LEN</span><span class="token operator">=</span><span class="token string">&quot;<span class="token variable">${OPTARG}</span>&quot;</span>
+      <span class="token punctuation">;</span><span class="token punctuation">;</span>
+    ?<span class="token punctuation">)</span>
+      usage
+      <span class="token punctuation">;</span><span class="token punctuation">;</span>
+  <span class="token keyword">esac</span>
+<span class="token keyword">done</span>
+
+<span class="token comment"># 获得数字和字母长度</span>
+<span class="token assign-left variable">LEN</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$((</span>$LEN<span class="token operator">-</span>$CHAR_LEN<span class="token variable">))</span></span>
+
+<span class="token comment"># 随机生成 LEN 位数字和字母组成的密码</span>
+<span class="token assign-left variable">PASSWORD</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span><span class="token function">date</span> +%s%N$<span class="token punctuation">{</span><span class="token environment constant">RANDOM</span><span class="token punctuation">}</span>$<span class="token punctuation">{</span><span class="token environment constant">RANDOM</span><span class="token punctuation">}</span> <span class="token operator">|</span> sha256sum <span class="token operator">|</span> <span class="token function">head</span> -c$<span class="token punctuation">{</span>LEN<span class="token punctuation">}</span><span class="token variable">)</span></span>
+
+<span class="token comment"># 向 PASSWORD 添加 CHAR_LEN 位特殊字符</span>
+<span class="token keyword">if</span> <span class="token punctuation">[</span><span class="token punctuation">[</span> <span class="token string">&quot;<span class="token variable">${USE_SPEC_CHAR}</span>&quot;</span> <span class="token operator">=</span> <span class="token string">'true'</span> <span class="token punctuation">]</span><span class="token punctuation">]</span>
+<span class="token keyword">then</span>
+  <span class="token assign-left variable">SPEC_CHAR</span><span class="token operator">=</span><span class="token punctuation">$(</span>echo <span class="token string">'!@#$%^&amp;*()_+='</span> <span class="token operator">|</span> <span class="token function">fold</span> -w1 <span class="token operator">|</span> <span class="token function">shuf</span> <span class="token operator">|</span> <span class="token function">tr</span> -d <span class="token string">'<span class="token entity" title="\n">\n</span>'</span> <span class="token operator">|</span> <span class="token function">head</span> -c<span class="token variable">${CHAR_LEN}</span> <span class="token punctuation">)</span>
+  <span class="token assign-left variable">PASSWORD</span><span class="token operator">=</span><span class="token string">&quot;<span class="token variable">${PASSWORD}</span><span class="token variable">${SPEC_CHAR}</span>&quot;</span>
+<span class="token keyword">fi</span>
+
+<span class="token comment"># 打乱密码顺序</span>
+<span class="token keyword">if</span> <span class="token punctuation">[</span><span class="token punctuation">[</span> <span class="token string">&quot;<span class="token variable">${DISORDER}</span>&quot;</span> <span class="token operator">==</span> <span class="token string">'true'</span> <span class="token punctuation">]</span><span class="token punctuation">]</span>
+<span class="token keyword">then</span>
+  <span class="token assign-left variable">PASSWORD</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span> <span class="token builtin class-name">echo</span> $<span class="token punctuation">{</span>PASSWORD<span class="token punctuation">}</span> <span class="token operator">|</span> <span class="token function">fold</span> -w1 <span class="token operator">|</span> <span class="token function">shuf</span> <span class="token operator">|</span> <span class="token function">tr</span> -d <span class="token string">'<span class="token entity" title="\n">\n</span>'</span><span class="token variable">)</span></span>
+<span class="token keyword">fi</span>
+
+<span class="token comment"># 移除已处理参数</span>
+<span class="token builtin class-name">shift</span> <span class="token variable"><span class="token variable">$((</span>OPTIND<span class="token operator">-</span><span class="token number">1</span><span class="token variable">))</span></span>
+
+<span class="token comment"># 创建账号</span>
+<span class="token function">useradd</span> -m <span class="token variable">$1</span>
+
+<span class="token comment"># 创建密码</span>
+<span class="token builtin class-name">echo</span> <span class="token variable">$1</span><span class="token builtin class-name">:</span><span class="token variable">${PASSWORD}</span><span class="token operator">|</span>chpasswd
+
+<span class="token comment"># 输出提示信息</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;your username is :<span class="token variable">$1</span>&quot;</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;your password is :<span class="token variable">${PASSWORD}</span>&quot;</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;add user successfully&quot;</span>
+
+<span class="token builtin class-name">exit</span> <span class="token number">0</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br></div></div><p>其中高亮部分:</p> <p>getopts的使用形式是：getopts option_string variable</p> <p>getopts一共有三个参数，第一个是<code>o</code>这样的选项，第二个参数是 <code>l</code>这样的参数，第三个是<code>s</code>这样的参数。</p> <p>选项之间可以通过冒号<code>:</code>进行分隔，也可以直接相连接，<code>:</code>表示选项后面必须带有参数，如果没有可以不加实际值进行传递</p> <h2 id="运行样例"><a href="#运行样例" class="header-anchor">#</a> 运行样例</h2> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 创建用户star 自动分配长度8的英文数字密码</span>
+adduser.sh -l <span class="token number">8</span> star
+
+<span class="token comment"># 创建用户star 自动分配长度8的密码 其中英文数字6位,后面特殊字符2位</span>
+adduser.sh -l <span class="token number">8</span> -s <span class="token number">2</span> star
+
+<span class="token comment"># 创建用户star 自动分配长度8的密码 其中英文数字6位,特殊字符2位, 英文数字和特殊字符乱序排列</span>
+adduser.sh -l <span class="token number">8</span> -s <span class="token number">2</span> -o star
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h2 id="以此类推"><a href="#以此类推" class="header-anchor">#</a> 以此类推</h2> <p>很多系统服务都以Shell脚本为基石，比如开机自启，定时任务，包括使用说明和操作，使用他们会给人们对于Linux环境下操作任务大大加速。这类似于Window下的Bat批处理任务。</p> <h2 id=""><a href="#" class="header-anchor">#</a></h2></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/starComingup/myBlog.git/edit/main/docs/sustain/shell.md" target="_blank" rel="noopener noreferrer">Edit this page</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">3/3/2021, 9:42:49 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/myBlog/sustain/" class="prev router-link-active">
+        Linux运维
+      </a></span> <span class="next"><a href="/myBlog/sustain/custom_domain&amp;https.html">
+        HTTPS配置
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----><div></div></div></div>
+    <script src="/myBlog/assets/js/app.50c7974d.js" defer></script><script src="/myBlog/assets/js/2.1d8fec94.js" defer></script><script src="/myBlog/assets/js/23.0153ead4.js" defer></script>
+  </body>
+</html>
